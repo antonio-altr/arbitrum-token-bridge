@@ -63,12 +63,14 @@ export function ClaimableCardConfirmed({ tx }: { tx: MergedTransaction }) {
 
     if (isWithdrawalSourceOrbitChain) {
       // Enable claim if withdrawn from an Orbit chain and is connected to L2
-      return isArbitrum
+      //return isArbitrum
+      return isEthereumMainnetOrTestnet
     }
 
     return (
       (isSourceChainIdEthereum && isArbitrum) ||
-      (isSourceChainIdArbitrum && isEthereumMainnetOrTestnet)
+      (isSourceChainIdArbitrum && isEthereumMainnetOrTestnet) ||
+      (isSourceChainIdEthereum && isOrbitChainSelected)
     )
   }, [
     l2.network.id,

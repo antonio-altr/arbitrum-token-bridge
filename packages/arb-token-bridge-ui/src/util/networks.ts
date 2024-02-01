@@ -159,7 +159,8 @@ export enum ChainId {
 
 export const supportedCustomOrbitParentChains = [
   ChainId.ArbitrumGoerli,
-  ChainId.ArbitrumSepolia
+  ChainId.ArbitrumSepolia,
+  ChainId.Sepolia,
 ]
 
 export const rpcURLs: { [chainId: number]: string } = {

@@ -780,7 +780,7 @@ export function TransferPanel() {
     )
     if (ethereumOrOrbitPairsSelected) {
       console.error('Cannot transfer funds between L1 and/or Orbit chains.')
-      return
+      //return
     }
 
     const l2NetworkName = getNetworkName(l2Network.id)
